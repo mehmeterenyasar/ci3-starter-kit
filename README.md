@@ -70,15 +70,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Media
 ![Panel](assets/upload/panel.png)
 ![Messages](assets/upload/messages.png)
-![Cash Register Detail](assets/upload/register_detail.png)
-![Cash Registers](assets/upload/cash_registers.png)
 ![Change Password](assets/upload/change_password.png)
-![Customer Detail](assets/upload/customer_detail.png)
+![Cash Registers](assets/upload/cash_registers.png)
+![Cash Register Detail](assets/upload/register_detail.png)
 ![Customers](assets/upload/customers.png)
+![Customer Detail](assets/upload/customer_detail.png)
+![Appointment Management](assets/upload/appointment_management.png)
+![Schedule Appointments](assets/upload/schedule_appointments.png)
 ![Appointments Front End](assets/upload/front_end_appointments.png)
 ![Map](assets/upload/map.png)
 ![Reporting](assets/upload/reporting.png)
-![Schedule Appointments](assets/upload/schedule_appointments.png)
-![Appointment Management](assets/upload/appointment_management.png)
+
 
 
