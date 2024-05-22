@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 22 May 2024, 19:52:13
+-- Üretim Zamanı: 22 May 2024, 20:35:40
 -- Sunucu sürümü: 10.4.28-MariaDB
 -- PHP Sürümü: 8.0.28
 
@@ -61,10 +61,9 @@ CREATE TABLE `appointments` (
 --
 
 INSERT INTO `appointments` (`id`, `name_surname`, `date`, `tel`, `email`, `message`, `status`) VALUES
-(23154, 'Adam Smith', '2024-05-21 09:00:00', '+123456789', 'mail@mail', 'Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It\'s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”\r\n', 0),
-(23155, 'John Doe', '2024-05-22 12:00:00', '+12345678', 'mail2@mail', '', 0),
-(23156, 'John Doe', '2024-05-23 10:00:00', '+123456789', 'mail3@mail', 'Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It\'s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”\r\n', 1),
-(23157, 'mehmet eren yaşar', '2024-05-27 10:00:00', '05300538538', 'mehmeteren.yasar00@gmail.com', '', 1);
+(23154, 'Adam Smith', '2024-05-21 09:00:00', '123456789', 'mail@mail', ' Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It\'s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”\r\n \r\n                                            ', 0),
+(23155, 'John Doe', '2024-05-22 12:00:00', '12345678', 'mail2@mail', '  \r\n                                            ', 0),
+(23156, 'John Doe', '2024-05-23 10:00:00', '123456789', 'mail3@mail', ' Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It\'s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”\r\n \r\n                                            ', 1);
 
 -- --------------------------------------------------------
 
@@ -86,7 +85,7 @@ CREATE TABLE `cash_registers` (
 --
 
 INSERT INTO `cash_registers` (`id`, `name`, `usd`, `try`, `eur`, `gbp`) VALUES
-(4, 'CASH', '-380', '4000', '650', '-900'),
+(4, 'CASH', '235', '-1350', '-125', '8600'),
 (6, 'BANK', '-500', '2000', '900', '150');
 
 -- --------------------------------------------------------
@@ -109,8 +108,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `customer`, `try`, `eur`, `usd`, `gbp`) VALUES
-(2, 'Customer 1', 0, 0, 0, 0),
-(3, 'Customer 2', -500, 600, -4000, 1200);
+(2, 'Customer 1', 5000, 800, -600, -9000),
+(3, 'Customer 2', 350, -25, -15, -500);
 
 -- --------------------------------------------------------
 
@@ -154,45 +153,45 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `name`, `email`, `tel`, `message`, `date`) VALUES
-(4, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
-(8, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
-(9, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(10, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(11, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-20'),
-(12, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
-(13, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(14, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(15, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-20'),
-(16, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
-(17, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(18, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(19, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(20, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(21, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(22, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(23, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(24, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(25, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(26, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(27, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(28, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(29, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(30, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
-(31, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(32, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(33, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(34, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(35, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(36, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(37, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(38, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
-(39, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
-(40, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
-(41, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25'),
-(42, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
-(43, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25'),
-(44, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25'),
-(45, 'John Doe', 'mail@mail', '+123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25');
+(4, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
+(8, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
+(9, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(10, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(11, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-20'),
+(12, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
+(13, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(14, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(15, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-20'),
+(16, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
+(17, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(18, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(19, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(20, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(21, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(22, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(23, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(24, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(25, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(26, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(27, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(28, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(29, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(30, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
+(31, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(32, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(33, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(34, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(35, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(36, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(37, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(38, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-22'),
+(39, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-23'),
+(40, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
+(41, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25'),
+(42, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-21'),
+(43, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25'),
+(44, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25'),
+(45, 'John Doe', 'mail@mail', '123456789', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante dui, lacinia eu lorem ut, vehicula rhoncus magna. Phasellus gravida ultricies ligula, ac mollis metus cursus nec.', '2024-05-25');
 
 -- --------------------------------------------------------
 
@@ -259,7 +258,15 @@ INSERT INTO `transaction_history` (`id`, `register_id`, `customer_id`, `input`, 
 (51, 4, 0, 4000, 0, 'TRY', NULL, '0000-00-00', 1),
 (52, 4, 0, 650, 0, 'EUR', NULL, '0000-00-00', 1),
 (53, 4, 0, 0, 380, 'USD', '', '2024-05-22', 2),
-(54, 4, 0, 0, 900, 'GBP', '', '2024-05-22', 2);
+(54, 4, 0, 0, 900, 'GBP', '', '2024-05-22', 2),
+(55, 4, 2, 0, 5000, 'TRY', '', '2024-05-22', 3),
+(56, 4, 2, 600, 0, 'USD', '', '2024-05-22', 4),
+(57, 4, 2, 9000, 0, 'GBP', '', '2024-05-22', 4),
+(58, 4, 2, 0, 800, 'EUR', '', '2024-05-22', 3),
+(59, 4, 3, 0, 350, 'TRY', '', '2024-05-22', 3),
+(60, 4, 3, 15, 0, 'USD', '', '2024-05-22', 4),
+(61, 4, 3, 25, 0, 'EUR', '', '2024-05-22', 4),
+(62, 4, 3, 500, 0, 'GBP', '', '2024-05-22', 4);
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -363,7 +370,7 @@ ALTER TABLE `shift`
 -- Tablo için AUTO_INCREMENT değeri `transaction_history`
 --
 ALTER TABLE `transaction_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
