@@ -36,7 +36,7 @@ Follow the steps below to set up the project:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/username/codeigniter3-starter-kit.git
+    git clone https://github.com/mehmeterenyasar/ci3-starter-kit.git
     cd codeigniter3-starter-kit
     ```
 
